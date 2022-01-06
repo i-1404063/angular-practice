@@ -1,0 +1,6 @@
+<ng-container *ngIf="edit">
+  <li><input type="text" value="task.title" /></li>
+</ng-container>
+<ng-container *ngIf="!edit">
+  <li>{{ task.title }}</li>
+</ng-container>
