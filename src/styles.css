@@ -5,31 +5,9 @@ html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-}
-
-.container {
-  width: 50%;
-  margin: 0px auto;
-  border: 2px solid saddlebrown;
-  border-radius: 5px;
-  overflow: hidden;
-  height: auto;
-  padding: 5px 10px;
-}
-
-.btn {
-  padding: 5px 10px;
-  font-size: 2rem;
-  cursor: pointer;
-  box-shadow: inset 2px 2px slategrey;
-  border: none;
-}
-
-.btn:active {
-  transform: scale(1.2);
 }

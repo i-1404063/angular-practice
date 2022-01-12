@@ -1,11 +1,16 @@
 {
-  "tasks": [
+  "restaurants": [
     {
-      "headers": {
-        "normalizedNames": {},
-        "lazyUpdate": null
-      },
-      "id": 3
+      "id": 1,
+      "name": "Chillis",
+      "email": "chillis@gmail.com",
+      "service": "Home Delivery"
+    },
+    {
+      "name": "Gulshan Cafe",
+      "email": "gulshan",
+      "service": "Home Delivery",
+      "id": 2
     }
   ]
 }

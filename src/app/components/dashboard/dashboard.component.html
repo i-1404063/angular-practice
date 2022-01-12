@@ -1,0 +1,90 @@
+<nav class="container-fluid navbar navbar-light bg-light">
+  <h2>Restaurant App</h2>
+  <div class="d-flex">
+    <button
+      type="button"
+      class="btn btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Add Restaurant
+    </button>
+  </div>
+</nav>
+
+<section class="res__table container-lg">
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Restaurant Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Service</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rest of restaurants">
+        <td>{{ rest.id }}</td>
+        <td>{{ rest.name }}</td>
+        <td>{{ rest.email }}</td>
+        <td>{{ rest.service }}</td>
+        <td>
+          <button [ngStyle]="{ 'margin-right': '10px' }" class="btn btn-info">
+            Edit
+          </button>
+          <button class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Modal -->
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Add Restaurant Details
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" formControlName="name" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Service</label>
+            <input type="text" class="form-control" formControlName="service" />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">
+          Add Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
